@@ -1,5 +1,5 @@
 **Overview**  
-  The goal of this project is to be able to create effective Conditional Access Policies using a variety of different Cloud tools in order to strengthen the security posture of a company. 
+  The goal of this project is to be able to create effective Conditional Access Policies using a variety of different cloud tools in order to strengthen the security posture of a company. 
   
 **Conditional Access (CA) Policies**  
   Conditional Access Policies in Azure are a security feature in Azure Active Directory (or Microsoft Entra ID) that helps you enforce rules that determine who can access what and under what circumstances. 
