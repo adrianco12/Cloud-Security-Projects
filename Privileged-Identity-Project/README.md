@@ -1,3 +1,6 @@
+**Overview**  
+The goal of this project is to research the functionality of PIM and propose its implementation. This includes determining why organizations should use it, who should have it, and how it can be implemented.
+
 **Privileged Identity Management (PIM) in Azure**  
 Privileged Identity Management (PIM) in Azure is a security feature that allows organizations to manage, control, and monitor access to sensitive roles and resources in Microsoft 365, Azure, and other connected services.  
 PIM allows users to elevate their privileges only when needed, for a limited time, and with approval, MFA, or justification.
