@@ -59,19 +59,19 @@ The following were used to justify why certain policies should be implemented:
 
 **Creating CA Policies:**  
   In a real world application, I would present my findings to the team or the executive board, and we would determine if they should be implemented. Here are the steps to implement these policies:
-  1. Location-Based Sign-In Access
+  1. Location-Based Sign-In Access:
     Created a new Conditional Access policy in Microsoft Entra.
     Targeted specific users and included all cloud apps.
     Under Conditions, enabled Locations and selected a named location group (e.g., Trusted IPs or countries).
     Configured the policy to block access if sign-ins originated outside trusted locations.
     Enabled the policy after verifying impact using report-only mode.
-2. Block Basic/Legacy Authentication
+2. Block Basic/Legacy Authentication:
   Created a CA policy to prevent use of outdated protocols like POP, IMAP, SMTP, and older Office clients.
   Assigned the policy to all users and applied it to all cloud apps.
   In Client Apps condition, selected "Other clients" to target legacy authentication.
   Set the grant control to block access, effectively disabling basic auth sign-ins.
   Validated impact by reviewing sign-in logs for legacy protocols before enabling.
-3. Block High-Risk Users
+3. Block High-Risk Users:
   Configured a CA policy to respond to high-risk user activity using Microsoft Entra ID Protection.
   Targeted all users and applied the policy to all cloud apps.
   In the User Risk condition, selected "High" risk level.
