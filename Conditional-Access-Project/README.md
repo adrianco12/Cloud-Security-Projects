@@ -69,7 +69,7 @@ Creating CA Policies
   Set access control to block access immediately for users detected as high risk.
   Enabled the policy to automatically protect the tenant from compromised accounts.
 
-Conclusion
+Conclusion:
 Implementing Conditional Access policies significantly enhanced the security posture of the cloud environment by enforcing identity-based controls. 
 By targeting key risk areas—such as blocking legacy authentication, restricting access based on location, and mitigating high-risk user sign-ins—I was able to demonstrate a proactive, policy-driven approach to access management. 
 These policies align with best practices from Microsoft and CIS Benchmarks, and showcase how Conditional Access can effectively reduce the attack surface while maintaining user productivity. 
