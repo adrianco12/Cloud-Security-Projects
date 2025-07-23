@@ -13,34 +13,43 @@ Preparing a CA Policy
     - Use “What if” tool to simulate policy effects. 
 
   Key Tools Used to Design Conditional Access Policies:  
-    To determine what rules to implement, Microsoft provides key Azure tools that can be used to create and configure CA Policies.
-    The following were used to justify why certain policies should be implemented:     
-         - Sign-in Logs (Microsoft Entra ID)   
-      - Looking at sign-in logs helps to identify risky sign-ins, legacy and authentication use, and unprotected logins.   
-      - You can look for users logging in without MFA, logins from unexpected countries/IPs, legacy protocols (POP, IMAP, SMTP), sign-ins from unmanaged devices, etc.   
-      - This would justify policies such as ‘Require MFA’ or ‘Block legacy auth’.   
-      - In my review of logs, I noticed that there were attempts to sign in from China and Russia.  
-    - Conditional Access Insights Workbook   
-      - This tool helps visualize which CA policies are applied (or not), and their impact. This helps with determining how the policy is being used, which users and apps are affected, gaps in coverage, and how effective the policy is.   
-      - I reviewed exisisting CA policies and evaluated their effectiveness.  
-    - Microsoft Secure Score   
-      - This tool allows you to assess your overall Microsoft 365/Azure AD security posture and get recommended actions.      
-      - The secure score I recieved was at 54%. I reviewed the recommendations and used them to evaluate the next steps in creating a CA Policy.  
-        - For example, a key reccommendation was to Enable Conditional Access policies to block legacy authentication. This would increase my score by 12%. It also gave a justification for it: "Today, most compromising sign-in attempts come from legacy authentication."  
-    - Identity Protection (Premium P2)   
-      - Detects risky users and sign-ins using machine learning.   
-      - Using this tool, I identified risky users and why they may be at risk.  
-      - Furthermore, I reviewed risky sign-ins, and determine that location and legacy authentication were putting sign-ins at a big risk.  
-    - Access Reviews   
-      - Review who has access to apps, roles, or groups—and determine if Conditional Access should apply more narrowly. This helps create more target CA rules.    
-    - Microsoft’s Conditional Access Recommendations   
-      - Microsoft provides baseline and advanced recommendations based on their research and feedback. For example, they recommend MFA for all users, blocking legacy authentication, requiring compliant devices for admins, and more.   
-    - NIST Cybersecurity Framework (NIST CSF)   
-      - NIST is widely adopted globally for setting security controls. Some relevant controls include PR.AC-1 to PR.AC-7 (IAM), DE.CM-7, PR.AC-4.   
-    - CIS Microsoft 365 Benchmarks   
-      - CIS provides hardening guides for Microsoft 365 and Azure.  
-      - CIS Control 4.4 recommends to restrict access based on geolocation.  
-    - Zero Trust Architecture Principles    
+ **To determine what rules to implement, Microsoft provides key Azure tools that can be used to create and configure CA Policies.**  
+**The following were used to justify why certain policies should be implemented:**
+
+- **Sign-in Logs (Microsoft Entra ID)**  
+  - Looking at sign-in logs helps to identify risky sign-ins, legacy and authentication use, and unprotected logins.  
+  - You can look for users logging in without MFA, logins from unexpected countries/IPs, legacy protocols (POP, IMAP, SMTP), sign-ins from unmanaged devices, etc.  
+  - This would justify policies such as ‘Require MFA’ or ‘Block legacy auth’.  
+  - In my review of logs, I noticed that there were attempts to sign in from China and Russia.
+
+- **Conditional Access Insights Workbook**  
+  - This tool helps visualize which CA policies are applied (or not), and their impact. This helps with determining how the policy is being used, which users and apps are affected, gaps in coverage, and how effective the policy is.  
+  - I reviewed existing CA policies and evaluated their effectiveness.
+
+- **Microsoft Secure Score**  
+  - This tool allows you to assess your overall Microsoft 365/Azure AD security posture and get recommended actions.  
+  - The secure score I received was at 54%. I reviewed the recommendations and used them to evaluate the next steps in creating a CA Policy.  
+    - For example, a key recommendation was to Enable Conditional Access policies to block legacy authentication. This would increase my score by 12%. It also gave a justification for it: "Today, most compromising sign-in attempts come from legacy authentication."
+
+- **Identity Protection (Premium P2)**  
+  - Detects risky users and sign-ins using machine learning.  
+  - Using this tool, I identified risky users and why they may be at risk.  
+  - Furthermore, I reviewed risky sign-ins, and determined that location and legacy authentication were putting sign-ins at a big risk.
+
+- **Access Reviews**  
+  - Review who has access to apps, roles, or groups—and determine if Conditional Access should apply more narrowly. This helps create more targeted CA rules.
+
+- **Microsoft’s Conditional Access Recommendations**  
+  - Microsoft provides baseline and advanced recommendations based on their research and feedback. For example, they recommend MFA for all users, blocking legacy authentication, requiring compliant devices for admins, and more.
+
+- **NIST Cybersecurity Framework (NIST CSF)**  
+  - NIST is widely adopted globally for setting security controls. Some relevant controls include PR.AC-1 to PR.AC-7 (IAM), DE.CM-7, PR.AC-4.
+
+- **CIS Microsoft 365 Benchmarks**  
+  - CIS provides hardening guides for Microsoft 365 and Azure.  
+  - CIS Control 4.4 recommends to restrict access based on geolocation.
+
+- **Zero Trust Architecture Principles**
       - Verify explicitly, use least privilege access, assume breach   
 
 Based on my findings, these are the CA Policies that I should implement:
