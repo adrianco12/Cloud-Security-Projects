@@ -11,10 +11,12 @@ PIM allows users to elevate their privileges only when needed, for a limited tim
 - Requires a manager or security team for approval before activation.
 
 **MFA Enforcement**
-- Forces users to complete MFA when activating the role.  
+- Forces users to complete MFA when activating the role.
+  
 **Audit Logs and Alerts**  
 - Logs every activation.  
-- Sends alerts for suspicious activity.  
+- Sends alerts for suspicious activity.
+  
 **Why Should an Organization Use PIM?**  
 Organizations should implement PIM to enhance security, reduce risk, and maintain better control over privileged access.
 **Key Benefits**
