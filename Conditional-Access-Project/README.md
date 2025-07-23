@@ -57,7 +57,7 @@ The following were used to justify why certain policies should be implemented:
   - Block Basic/Legacy Authentication 
   - Block High-Risk Users
 
-**Creating CA Policies**
+**Creating CA Policies:**  
   In a real world application, I would present my findings to the team or the executive board, and we would determine if they should be implemented. Here are the steps to implement these policies:
   1. Location-Based Sign-In Access
     Created a new Conditional Access policy in Microsoft Entra.
