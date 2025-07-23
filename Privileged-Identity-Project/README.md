@@ -1,110 +1,112 @@
-Privileged Identity Management (PIM) in Azure
-Privileged Identity Management (PIM) in Azure is a security feature that allows organizations to manage, control, and monitor access to sensitive roles and resources in Microsoft 365, Azure, and other connected services.
-PIM allows users to elevate their privileges only when needed, for a limited time, and with approval, MFA, or justification. Here’s how it works:
+# **Privileged Identity Management (PIM) in Azure**
 
-Eligible vs Active Assignments
+Privileged Identity Management (PIM) in Azure is a security feature that allows organizations to manage, control, and monitor access to sensitive roles and resources in Microsoft 365, Azure, and other connected services.  
+PIM allows users to elevate their privileges only when needed, for a limited time, and with approval, MFA, or justification.
 
-Eligible: User can activate the role when needed.
+## **Eligible vs Active Assignments**
 
-Active: User always has the role (less secure).
+- **Eligible**: User can activate the role when needed.  
+- **Active**: User always has the role (less secure).  
+- Users activate roles only when required, and Admins can set time limits.
 
-Users activate roles only when required, and Admins can set time limits.
+---
 
-Approval Workflow
+## **Approval Workflow**
 
-Requires a manager or security team for approval before activation.
+- Requires a manager or security team for approval before activation.
 
-MFA Enforcement
+---
 
-Forces users to complete MFA when activating the role.
+## **MFA Enforcement**
 
-Audit Logs and Alerts
+- Forces users to complete MFA when activating the role.
 
-Logs every activation.
+---
 
-Sends alerts for suspicious activity.
+## **Audit Logs and Alerts**
 
-Why Should an Organization Use PIM?
+- Logs every activation.  
+- Sends alerts for suspicious activity.
+
+---
+
+## **Why Should an Organization Use PIM?**
+
 Organizations should implement PIM to enhance security, reduce risk, and maintain better control over privileged access.
 
-Key Benefits:
+### **Key Benefits**
 
-Reduces Attack Surface
-Employees with always-on admin access increase risk. PIM limits access to when it’s needed.
+- **Reduces Attack Surface**  
+  Employees with always-on admin access increase risk. PIM limits access to when it’s needed.
 
-Just-In-Time Access
-Temporary elevation reduces the risk of compromised accounts and insider threats.
+- **Just-In-Time Access**  
+  Temporary elevation reduces the risk of compromised accounts and insider threats.
 
-Enforces Least Privilege
-Helps enforce Zero Trust by ensuring users only have elevated access when necessary.
+- **Enforces Least Privilege**  
+  Helps enforce Zero Trust by ensuring users only have elevated access when necessary.
 
-Enhances Auditability
-All activations are logged with optional justification and approval workflows.
+- **Enhances Auditability**  
+  All activations are logged with optional justification and approval workflows.
 
-Supports Compliance
-Meets regulatory standards like HIPAA, GDPR, ISO 27001 by controlling privileged access.
+- **Supports Compliance**  
+  Meets regulatory standards like HIPAA, GDPR, ISO 27001 by controlling privileged access.
 
-Potential Drawbacks of PIM — With Counterpoints
+---
 
-Drawback	Description	Counterpoint
-Operational Friction	Admins have to activate roles each time.	Configure emergency access for fast activation.
-Slows Down Productivity	Approvals and MFA create delays for routine work.	Use auto-approval or extend duration settings for frequent roles.
-Learning Curve	Might be confusing for admins new to PIM.	Microsoft offers built-in tutorials and documentation.
+## **Potential Drawbacks of PIM — With Counterpoints**
 
-Which Users Should Get PIM?
+| **Drawback**             | **Description**                                                           | **Counterpoint**                                                          |
+|--------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| Operational Friction     | Admins have to activate roles each time.                                  | Configure emergency access for fast activation.                          |
+| Slows Down Productivity  | Approvals and MFA create delays for routine work.                         | Use auto-approval or extend duration settings for frequent roles.        |
+| Learning Curve           | Might be confusing for admins new to PIM.                                 | Microsoft offers built-in tutorials and documentation.                   |
+
+---
+
+## **Which Users Should Get PIM?**
+
 PIM should be assigned to users who:
 
-Have global administrator, user administrator, or billing administrator roles.
+- Have **Global Administrator**, **User Administrator**, or **Billing Administrator** roles.  
+- Regularly access **sensitive or financial data**.  
+- Work in **IT or cybersecurity** and require elevated permissions for troubleshooting or projects.  
+- Are **high-profile phishing targets** (e.g., executives, finance, HR).  
+- Require **temporary access** to perform elevated tasks during deployments, updates, or escalations.  
+- Perform **compliance-related tasks** that involve sensitive configurations.  
+- Are **contractors or external users** needing temporary access.
 
-Regularly access sensitive or financial data.
+---
 
-Work in IT or cybersecurity and require elevated permissions for troubleshooting or projects.
+## **How to Set Up PIM in Azure**
 
-Are high-profile phishing targets (e.g., executives, finance, HR).
+### **Step 1: Enable PIM**
 
-Require temporary access to perform elevated tasks during deployments, updates, or escalations.
+1. Go to the **Azure Portal**.  
+2. Search for and open **Azure AD Privileged Identity Management**.  
+3. Click on **Azure AD roles** or **Azure resource roles**.  
+4. Select **"Enable PIM"** for your directory.
 
-Perform compliance-related tasks that involve sensitive configurations.
+### **Step 2: Assign Eligible Roles**
 
-Are contractors or external users needing temporary access.
+1. Under **Roles**, choose the role you want to manage (e.g., Global Administrator).  
+2. Click **"Add assignments"**.  
+3. Select the user(s), set the assignment type to **Eligible**, and configure duration/conditions.
 
-How to Set Up PIM in Azure
+### **Step 3: Configure Role Settings**
 
-Step 1: Enable PIM
+1. Choose the role > Click **Settings**.  
+2. Configure:  
+   - **MFA requirement**  
+   - **Justification requirement**  
+   - **Approval workflow**  
+   - **Activation duration**
 
-Go to the Azure Portal.
+### **Step 4: Monitor and Audit**
 
-Search for and open Azure AD Privileged Identity Management.
+- Use the **Audit logs** and **Alerts** features to track usage and receive notifications of unusual behavior.
 
-Click on Azure AD roles or Azure resource roles.
+---
 
-Select "Enable PIM" for your directory.
+## **Conclusion**
 
-Step 2: Assign Eligible Roles
-
-Under Roles, choose the role you want to manage (e.g., Global Administrator).
-
-Click "Add assignments".
-
-Select the user(s), set the assignment type to Eligible, and configure duration/conditions.
-
-Step 3: Configure Role Settings
-
-Choose the role > Click Settings.
-
-Configure:
-
-MFA requirement
-
-Justification requirement
-
-Approval workflow
-
-Activation duration
-
-Step 4: Monitor and Audit
-
-Use the Audit logs and Alerts features to track usage and receive notifications of unusual behavior.
-
-Conclusion
-PIM allows organizations to enforce Just-in-Time access, Just-Enough-Access, approval workflows, and detailed audit logs — all essential components of a secure cloud environment. Despite minor operational friction, its benefits far outweigh the drawbacks, making it a core component of modern identity governance.
+PIM allows organizations to enforce **Just-in-Time access**, **Just-Enough-Access**, approval workflows, and detailed audit logs — all essential components of a secure cloud environment
