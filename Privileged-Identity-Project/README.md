@@ -29,8 +29,6 @@ Organizations should implement PIM to enhance security, reduce risk, and maintai
 **Supports Compliance**  
   Meets regulatory standards like HIPAA, GDPR, ISO 27001 by controlling privileged access.
 
----
-
 **Potential Drawbacks of PIM — With Counterpoints**
 
 | **Drawback**             | **Description**                                                           | **Counterpoint**                                                          |
@@ -50,7 +48,7 @@ PIM should be assigned to users who:
 - Require **temporary access** to perform elevated tasks during deployments, updates, or escalations.  
 - Perform **compliance-related tasks** that involve sensitive configurations.  
 - Are **contractors or external users** needing temporary access.
-- 
+
 **How to Set Up PIM in Azure**
 
 **Step 1: Enable PIM**
