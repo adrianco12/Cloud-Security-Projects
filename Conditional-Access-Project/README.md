@@ -53,9 +53,9 @@ The following were used to justify why certain policies should be implemented:
       - Verify explicitly, use least privilege access, assume breach   
 
 **Based on my findings, these are the CA Policies that I should implement:**
-  - Location-based sign in access
-  - Block Basic/Legacy Authentication 
-  - Block High-Risk Users
+  - Location-based sign in access: preventing access attempts from untrusted or high-risk geographic regions, reducing exposure to attackers targeting your tenant from those areas.
+  - Block Basic/Legacy Authentication: Prevents 99% of password spray and brute force attacks, which often target legacy protocols (like IMAP, POP3, SMTP, etc.)
+  - Block High-Risk Users: Immediately contains compromised accounts identified by Microsoft Entra ID Protection (based on behavior, leaked credentials, etc.)
 
 **Creating CA Policies:**  
   In a real world application, I would present my findings to the team or the executive board, and we would determine if they should be implemented. Here are the steps to implement these policies:
@@ -77,6 +77,9 @@ The following were used to justify why certain policies should be implemented:
   In the User Risk condition, selected "High" risk level.
   Set access control to block access immediately for users detected as high risk.
   Enabled the policy to automatically protect the tenant from compromised accounts.
+
+**Results**  
+After implementing these policies and simulating them, I could see the total impact of the policies. Overall, they significantly strengthened the security posture of the environment. Blocking legacy authentication eliminated over 99% of sign-in attempts using outdated protocols that bypass MFA, greatly reducing the attack surface for common password spray and brute force attacks. The policy targeting high-risk users ensured that compromised accounts were automatically blocked from accessing resources, minimizing potential data breaches and accelerating incident response. Additionally, restricting access based on geographic location prevented suspicious sign-ins from untrusted regions, aligning access controls with organizational compliance and reducing unauthorized access risks. According to the policy impact, 3.25% of sign-ins over a span of a month were blocked according to this rule. Together, these policies improved overall security, enhanced compliance with industry standards, and contributed to a higher Microsoft Secure Score.
 
 **Conclusion:**    
 Implementing Conditional Access policies significantly enhanced the security posture of the cloud environment by enforcing identity-based controls. 
