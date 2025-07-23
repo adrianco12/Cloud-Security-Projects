@@ -15,7 +15,7 @@ Preparing a CA Policy
   Key Tools Used to Design Conditional Access Policies:  
     To determine what rules to implement, Microsoft provides key Azure tools that can be used to create and configure CA Policies.
     The following were used to justify why certain policies should be implemented:     
-    - Sign-in Logs (Microsoft Entra ID)   
+    > - Sign-in Logs (Microsoft Entra ID)   
       - Looking at sign-in logs helps to identify risky sign-ins, legacy and authentication use, and unprotected logins.   
       - You can look for users logging in without MFA, logins from unexpected countries/IPs, legacy protocols (POP, IMAP, SMTP), sign-ins from unmanaged devices, etc.   
       - This would justify policies such as ‘Require MFA’ or ‘Block legacy auth’.   
