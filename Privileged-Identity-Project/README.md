@@ -18,17 +18,17 @@ PIM allows users to elevate their privileges only when needed, for a limited tim
 - Sends alerts for suspicious activity.
   
 **Why Should an Organization Use PIM?**  
-Organizations should implement PIM to enhance security, reduce risk, and maintain better control over privileged access.
-**Key Benefits**
-**Reduces Attack Surface**  
+Organizations should implement PIM to enhance security, reduce risk, and maintain better control over privileged access.  
+**Key Benefits**  
+**Reduces Attack Surface:**     
   Employees with always-on admin access increase risk. PIM limits access to when it’s needed.
-**Just-In-Time Access**  
+**Just-In-Time Access:**    
   Temporary elevation reduces the risk of compromised accounts and insider threats.
-**Enforces Least Privilege**  
+**Enforces Least Privilege:**    
   Helps enforce Zero Trust by ensuring users only have elevated access when necessary.
-**Enhances Auditability**  
+**Enhances Auditability:**    
   All activations are logged with optional justification and approval workflows.
-**Supports Compliance**  
+**Supports Compliance:**    
   Meets regulatory standards like HIPAA, GDPR, ISO 27001 by controlling privileged access.
 
 **Potential Drawbacks of PIM — With Counterpoints**
