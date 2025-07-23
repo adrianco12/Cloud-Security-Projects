@@ -1,20 +1,20 @@
-Conditional Access (CA) Policies 
+**Conditional Access (CA) Policies**  
   Conditional Access Policies in Azure are a security feature in Azure Active Directory (or Microsoft Entra ID) that helps you enforce rules that determine who can access what and under what circumstances. 
   It operates similarly to “if-then” statements in programming. For example: If the user signs in under specific conditions, then enforce a policy (like MFA, blocking access, or allowing access only from compliant devices).
   The “IF” part of the statement would be the user or group (ex: admins or HR team), the application being accessed (ex: SharePoint, Teams), the location, the device platform (IOS, Android, Windows), the client app, and more. 
   The “THEN” part of the statement would grant controls (Ex: require MFA), block access, or enforce session controls (Ex: limit session length, enforce read-only access, etc). 
   Here is an example of a policy in terms of a conditional statement: IF a user tries to access Microsoft 365 from an unmanaged device, THEN require MFA and only allows web access. 
 
-Preparing a CA Policy
+**Preparing a CA Policy**  
   When creating a conditional access policy, it’s important to consider the following: 
     - When testing policies, report-only mode should be used. 
     - Exclude one break-glass account from all CA policies in the event of an emergency. 
     - Review sign-in logs to monitor impact 
     - Use “What if” tool to simulate policy effects. 
 
-  Key Tools Used to Design Conditional Access Policies:  
- **To determine what rules to implement, Microsoft provides key Azure tools that can be used to create and configure CA Policies.**  
-**The following were used to justify why certain policies should be implemented:**
+  **Key Tools Used to Design Conditional Access Policies:**  
+ To determine what rules to implement, Microsoft provides key Azure tools that can be used to create and configure CA Policies.  
+The following were used to justify why certain policies should be implemented:
 
 - **Sign-in Logs (Microsoft Entra ID)**  
   - Looking at sign-in logs helps to identify risky sign-ins, legacy and authentication use, and unprotected logins.  
@@ -52,12 +52,12 @@ Preparing a CA Policy
 - **Zero Trust Architecture Principles**
       - Verify explicitly, use least privilege access, assume breach   
 
-Based on my findings, these are the CA Policies that I should implement:
+**Based on my findings, these are the CA Policies that I should implement:**
   - Location-based sign in access
   - Block Basic/Legacy Authentication 
   - Block High-Risk Users
 
-Creating CA Policies
+**Creating CA Policies**
   In a real world application, I would present my findings to the team or the executive board, and we would determine if they should be implemented. Here are the steps to implement these policies:
   1. Location-Based Sign-In Access
     Created a new Conditional Access policy in Microsoft Entra.
@@ -78,7 +78,7 @@ Creating CA Policies
   Set access control to block access immediately for users detected as high risk.
   Enabled the policy to automatically protect the tenant from compromised accounts.
 
-Conclusion:  
+**Conclusion:**    
 Implementing Conditional Access policies significantly enhanced the security posture of the cloud environment by enforcing identity-based controls. 
 By targeting key risk areas—such as blocking legacy authentication, restricting access based on location, and mitigating high-risk user sign-ins—I was able to demonstrate a proactive, policy-driven approach to access management. 
 These policies align with best practices from Microsoft and CIS Benchmarks, and showcase how Conditional Access can effectively reduce the attack surface while maintaining user productivity. 
